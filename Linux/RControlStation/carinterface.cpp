@@ -355,7 +355,7 @@ bool CarInterface::setAp(bool on, bool resetState)
         if (ok) {
             if (on)
                 ui->keyboardControlBox->setChecked(false);
-            ui->autopilotBox->setChecked(on);
+            //ui->autopilotBox->setChecked(on);
         }
     }
 
