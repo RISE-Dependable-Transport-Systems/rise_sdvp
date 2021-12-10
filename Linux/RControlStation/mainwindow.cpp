@@ -2192,6 +2192,15 @@ void MainWindow::on_mapRoutePosAttrBox_currentIndexChanged(int index)
     ui->mapWidget->setRoutePointAttributes(attr);
 }
 
+void MainWindow::on_mapRouteToolAttrBox_currentIndexChanged(int index)
+{
+    quint32 attr = ui->mapWidget->getRoutePointAttributes();
+    attr &= ~ATTR_HYDRAULIC_MASK;
+    index++;
+    attr |= (index << 3);
+    ui->mapWidget->setRoutePointAttributes(attr);
+}
+
 void MainWindow::on_clearAnchorButton_clicked()
 {
     mPacketInterface->clearUwbAnchors(ui->mapCarBox->value());

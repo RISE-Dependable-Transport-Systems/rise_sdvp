@@ -201,6 +201,8 @@ private slots:
 
     void on_AutopilotPausePushButton_clicked();
 
+    void on_mapRouteToolAttrBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QTimer *mTimer;

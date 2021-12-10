@@ -1166,7 +1166,7 @@
                <enum>QTabWidget::Rounded</enum>
               </property>
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <property name="usesScrollButtons">
                <bool>false</bool>
@@ -1724,13 +1724,6 @@
                        <property name="verticalSpacing">
                         <number>3</number>
                        </property>
-                       <item row="1" column="0">
-                        <widget class="QTimeEdit" name="mapRouteTimeEdit">
-                         <property name="displayFormat">
-                          <string>T: HH:mm:ss:zzz</string>
-                         </property>
-                        </widget>
-                       </item>
                        <item row="0" column="1">
                         <widget class="QPushButton" name="mapUpdateSpeedButton">
                          <property name="sizePolicy">
@@ -1748,37 +1741,6 @@
                          <property name="icon">
                           <iconset resource="resources.qrc">
                            <normaloff>:/models/Icons/Available Updates-96.png</normaloff>:/models/Icons/Available Updates-96.png</iconset>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="1" column="1">
-                        <widget class="QPushButton" name="mapUpdateTimeButton">
-                         <property name="toolTip">
-                          <string>Set start time to a specified time from now</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                         <property name="icon">
-                          <iconset resource="resources.qrc">
-                           <normaloff>:/models/Icons/Clock-96.png</normaloff>:/models/Icons/Clock-96.png</iconset>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="2" column="0" colspan="2">
-                        <widget class="QTimeEdit" name="mapRouteAddTimeEdit">
-                         <property name="toolTip">
-                          <string>Time to add to each new route point from previous point</string>
-                         </property>
-                         <property name="displayFormat">
-                          <string>'Add': HH:mm:ss:zzz</string>
-                         </property>
-                         <property name="time">
-                          <time>
-                           <hour>0</hour>
-                           <minute>0</minute>
-                           <second>2</second>
-                          </time>
                          </property>
                         </widget>
                        </item>
@@ -1803,6 +1765,9 @@
                        </item>
                        <item row="3" column="0" colspan="2">
                         <widget class="QComboBox" name="mapRoutePosAttrBox">
+                         <property name="currentIndex">
+                          <number>0</number>
+                         </property>
                          <item>
                           <property name="text">
                            <string>Pos Default</string>
@@ -1821,6 +1786,84 @@
                          <item>
                           <property name="text">
                            <string>Pos Combined</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QTimeEdit" name="mapRouteTimeEdit">
+                         <property name="displayFormat">
+                          <string>T: HH:mm:ss:zzz</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0" colspan="2">
+                        <widget class="QTimeEdit" name="mapRouteAddTimeEdit">
+                         <property name="toolTip">
+                          <string>Time to add to each new route point from previous point</string>
+                         </property>
+                         <property name="displayFormat">
+                          <string>'Add': HH:mm:ss:zzz</string>
+                         </property>
+                         <property name="time">
+                          <time>
+                           <hour>0</hour>
+                           <minute>0</minute>
+                           <second>2</second>
+                          </time>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="mapUpdateTimeButton">
+                         <property name="toolTip">
+                          <string>Set start time to a specified time from now</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources.qrc">
+                           <normaloff>:/models/Icons/Clock-96.png</normaloff>:/models/Icons/Clock-96.png</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0" colspan="2">
+                        <widget class="QComboBox" name="mapRouteToolAttrBox">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="currentIndex">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>Hydraulic Front Up</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hydraulic Front Down</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hydraulic Rear Up</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hydraulic Rear Down</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hydraulic Extra Out</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hydraulic Extra in</string>
                           </property>
                          </item>
                         </widget>
