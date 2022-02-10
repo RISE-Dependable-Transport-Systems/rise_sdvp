@@ -2184,23 +2184,6 @@ void MainWindow::on_routeZeroAllButton_clicked()
     ui->mapWidget->zoomInOnRoute(-1, 0.1);
 }
 
-void MainWindow::on_mapRoutePosAttrBox_currentIndexChanged(int index)
-{
-    quint32 attr = ui->mapWidget->getRoutePointAttributes();
-    attr &= ~ATTR_POSITIONING_MASK;
-    attr |= index;
-    ui->mapWidget->setRoutePointAttributes(attr);
-}
-
-void MainWindow::on_mapRouteToolAttrBox_currentIndexChanged(int index)
-{
-    quint32 attr = ui->mapWidget->getRoutePointAttributes();
-    attr &= ~ATTR_HYDRAULIC_MASK;
-    index++;
-    attr |= (index << 3);
-    ui->mapWidget->setRoutePointAttributes(attr);
-}
-
 void MainWindow::on_clearAnchorButton_clicked()
 {
     mPacketInterface->clearUwbAnchors(ui->mapCarBox->value());
@@ -2339,4 +2322,11 @@ void MainWindow::on_AutopilotPausePushButton_clicked()
         CarInterface *car = dynamic_cast<CarInterface*>(tmp);
         car->setAp(false, false);
     }
+}
+
+void MainWindow::on_lineEdit_textChanged(const QString &arg1)
+{
+    bool bStatus = false;
+    quint32 attr = arg1.toUInt(&bStatus, 16);
+    ui->mapWidget->setRoutePointAttributes(attr);
 }

@@ -1724,6 +1724,20 @@
                        <property name="verticalSpacing">
                         <number>3</number>
                        </property>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="mapUpdateTimeButton">
+                         <property name="toolTip">
+                          <string>Set start time to a specified time from now</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources.qrc">
+                           <normaloff>:/models/Icons/Clock-96.png</normaloff>:/models/Icons/Clock-96.png</iconset>
+                         </property>
+                        </widget>
+                       </item>
                        <item row="0" column="1">
                         <widget class="QPushButton" name="mapUpdateSpeedButton">
                          <property name="sizePolicy">
@@ -1763,37 +1777,20 @@
                          </property>
                         </widget>
                        </item>
-                       <item row="3" column="0" colspan="2">
-                        <widget class="QComboBox" name="mapRoutePosAttrBox">
-                         <property name="currentIndex">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <property name="text">
-                           <string>Pos Default</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Pos RTK</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Pos UWB</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Pos Combined</string>
-                          </property>
-                         </item>
-                        </widget>
-                       </item>
                        <item row="1" column="0">
                         <widget class="QTimeEdit" name="mapRouteTimeEdit">
                          <property name="displayFormat">
                           <string>T: HH:mm:ss:zzz</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0">
+                        <widget class="QLineEdit" name="lineEdit">
+                         <property name="toolTip">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input Hex number for hydraulic tool control (max value 0xFFFFFFFF)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                         <property name="text">
+                          <string>0x00000000</string>
                          </property>
                         </widget>
                        </item>
@@ -1812,60 +1809,6 @@
                            <second>2</second>
                           </time>
                          </property>
-                        </widget>
-                       </item>
-                       <item row="1" column="1">
-                        <widget class="QPushButton" name="mapUpdateTimeButton">
-                         <property name="toolTip">
-                          <string>Set start time to a specified time from now</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                         <property name="icon">
-                          <iconset resource="resources.qrc">
-                           <normaloff>:/models/Icons/Clock-96.png</normaloff>:/models/Icons/Clock-96.png</iconset>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="4" column="0" colspan="2">
-                        <widget class="QComboBox" name="mapRouteToolAttrBox">
-                         <property name="enabled">
-                          <bool>true</bool>
-                         </property>
-                         <property name="currentIndex">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <property name="text">
-                           <string>Hydraulic Front Up</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Hydraulic Front Down</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Hydraulic Rear Up</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Hydraulic Rear Down</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Hydraulic Extra Out</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Hydraulic Extra in</string>
-                          </property>
-                         </item>
                         </widget>
                        </item>
                       </layout>

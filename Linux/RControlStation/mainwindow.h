@@ -176,7 +176,6 @@ private slots:
     void on_tabWidget_currentChanged(int index);
     void on_routeZeroButton_clicked();
     void on_routeZeroAllButton_clicked();
-    void on_mapRoutePosAttrBox_currentIndexChanged(int index);
     void on_clearAnchorButton_clicked();
     void on_setBoundsRoutePushButton_clicked();
     void on_boundsFillPushButton_clicked();
@@ -201,7 +200,7 @@ private slots:
 
     void on_AutopilotPausePushButton_clicked();
 
-    void on_mapRouteToolAttrBox_currentIndexChanged(int index);
+    void on_lineEdit_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;
