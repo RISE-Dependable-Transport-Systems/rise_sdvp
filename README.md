@@ -1,3 +1,8 @@
+
+**This project is in the process of being succeeded by https://github.com/RISE-Dependable-Transport-Systems/sdvp_qtcommon**
+
+
+
 # The RISE Self-Driving Model Vehicle Platform (SDVP)
 
 This is the source code and hardware design for a model vehicle platform developed and maintained at RISE Research Institutes of Sweden. The platform currently has full support for cars with Ackermann steering, robots with differential steering and partial support for quadcopters.
